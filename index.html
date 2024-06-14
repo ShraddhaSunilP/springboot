@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Categories</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      .category {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 15px;
+      }
+
+      .category:hover {
+        transform: scale(1.05);
+      }
+
+      .category-image {
+        width: 100%;
+        padding-bottom: 100%; /* Makes it square */
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .category-name {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 18px;
+        border-radius: 10px 10px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-2">
+          <div class="category">
+            <div
+              class="category-image"
+              style="background-image: url('category1.jpg')"
+            ></div>
+            <div class="category-name">Category 1</div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="category">
+            <div
+              class="category-image"
+              style="background-image: url('category2.jpg')"
+            ></div>
+            <div class="category-name">Category 2</div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="category">
+            <div
+              class="category-image"
+              style="background-image: url('category3.jpg')"
+            ></div>
+            <div class="category-name">Category 3</div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="category">
+            <div
+              class="category-image"
+              style="background-image: url('category4.jpg')"
+            ></div>
+            <div class="category-name">Category 4</div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="category">
+            <div
+              class="category-image"
+              style="background-image: url('category5.jpg')"
+            ></div>
+            <div class="category-name">Category 5</div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="category">
+            <div
+              class="category-image"
+              style="background-image: url('category6.jpg')"
+            ></div>
+            <div class="category-name">Category 6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
