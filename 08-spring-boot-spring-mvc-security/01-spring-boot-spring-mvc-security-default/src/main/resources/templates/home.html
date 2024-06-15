@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Innolytic Company Home Page</title>
+</head>
+<body>
+    <h2>Innolytic Company Home Page - yoohoo!!!</h2>
+    <hr>
+    <p>
+        Welcome to the Innolytic company home page!
+    </p>
+    <hr>
+
+    <!-- Dispaly user name and role -->
+    <p>
+        User : <span sec:authentication="principal.username"></span>
+        <br><br>
+        Role(s) : <span sec:authentication="principal.authorities"></span>
+
+    </p>
+
+    <!--  Only show this section of code to MANAGER role -->
+    <div sec:authorize="hasRole('MANAGER')">
+        <p>
+            <!-- Add a link to point to /leafers ...this is for the managers -->
+            <a th:href="@{/leaders}">Leadership Meeting</a>
+            (Only for Manager peeps)
+        </p>
+    </div>
+
+
+    <!--  Only show this section of code to ADMIN role -->
+    <div sec:authorize="hasRole('ADMIN')">
+        <p>
+            <!--  Add a link to pint to /systems ... this is for the admins  -->
+            <a th:href="@{/systems}">
+                IT Systems Meeting
+            </a>
+            (Only for Admin peeps)
+        </p>
+    </div>
+
+    <hr>
+
+    <!-- Add a logout button -->
+    <form action="#" th:action="@{/logout}" method="POST">
+        <input type="submit" value="Logout">
+    </form>
+</body>
+</html>
