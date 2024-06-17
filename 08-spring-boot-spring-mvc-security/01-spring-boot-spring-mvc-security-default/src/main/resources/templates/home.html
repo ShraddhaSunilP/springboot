@@ -12,7 +12,6 @@
         Welcome to the Innolytic company home page!
     </p>
     <hr>
-
     <!-- Dispaly user name and role -->
     <p>
         User : <span sec:authentication="principal.username"></span>
@@ -29,8 +28,6 @@
             (Only for Manager peeps)
         </p>
     </div>
-
-
     <!--  Only show this section of code to ADMIN role -->
     <div sec:authorize="hasRole('ADMIN')">
         <p>
@@ -41,9 +38,7 @@
             (Only for Admin peeps)
         </p>
     </div>
-
     <hr>
-
     <!-- Add a logout button -->
     <form action="#" th:action="@{/logout}" method="POST">
         <input type="submit" value="Logout">

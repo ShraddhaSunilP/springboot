@@ -24,7 +24,6 @@ public class DemoSecurityConfig {
         // define query to retrieve the authoruities/roles by username
         jdbcUserDetailsManager.setAuthoritiesByUsernameQuery(
         "select user_id, role from roles where user_id=?"
-
         );
         return jdbcUserDetailsManager;
     }
@@ -53,7 +52,6 @@ public class DemoSecurityConfig {
                         configurer.accessDeniedPage("/access-denied"));
         return http.build();
     }
-
 }
 
 //@Bean
